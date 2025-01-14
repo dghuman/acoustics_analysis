@@ -47,7 +47,7 @@ def main():
     debug = False
     height = 0.0075
     height_2 = 0.003
-    channel_name = 'ch4'
+    channel_name = 'ch1'
     prop_cycle = plt.rcParams['axes.prop_cycle']
     colors = prop_cycle.by_key()['color']
     music_dir = load_dir()
