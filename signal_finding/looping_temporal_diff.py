@@ -3,12 +3,13 @@ import matplotlib as mplt
 import numpy as np
 import soundfile as sf
 import os
-import argparse
+import argparse peaks
 import hist
 from hist import Hist
 from scipy import signal
 from peak_frequency import load_data, freq_spec, butter_bandpass_filter, load_dir
 from arrival_time import find_arrival_time, compute_stats
+
 from tqdm import tqdm
 import h5py as hp
 
@@ -82,7 +83,7 @@ def main():
             means[i], stds[i] = compute_stats(full_diff, [0.5 + (peaks[i] - 2)*0.01, 0.5 + (peaks[i] + 2)*0.01])
         print(f"Means are {means}")
         print(f"with STDs {stds}")
-        print(f"with counts {y_cut[peaks]}")
+        print(f"with counts {y_cut[]}")
         if not save:
             plt.clf()
             plt.hist(full_diff, bins = x)
